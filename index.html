@@ -25,6 +25,10 @@
             --bg-secondary: #f3f4f6;
             /* Gris clair pour alterner les sections */
             --accent-color: #111827;
+            --gold: #D4AF37;       /* Or premium */
+            
+            --gold-hover: #C9A227;
+
             /* Noir pur pour les titres forts */
 
             /* Espacements et Layout */
@@ -76,14 +80,17 @@
         }
 
         .btn-primary {
-            background-color: var(--primary-color);
-            color: white;
-        }
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--gold);
+}
+
 
         .btn-primary:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-2px);
-        }
+    background-color: var(--gold);
+    color: #111827;
+    transform: translateY(-2px);
+}
 
         .btn-outline {
             background-color: transparent;
@@ -110,7 +117,16 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-        }
+        } 
+        .section-title::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: var(--gold);
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
 
         /* 
          * 2. HEADER 
@@ -134,7 +150,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 800;
-            color: var(--accent-color);
+            color: var(--gold);
         }
 
         .nav-links {
@@ -215,9 +231,10 @@
             border: 1px solid #e5e7eb;
             display: flex;
             flex-direction: column;
+            border-top: 4px solid var(--gold);
         }
 
-        .project-card:hover {
+    .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         }
@@ -337,14 +354,14 @@
         }
 
         .skill-tag {
-            background-color: #eff6ff;
-            color: var(--primary-color);
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border: 1px solid #dbeafe;
-        }
+    background-color: #fff9e6;
+    color: #7a6400;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 1px solid var(--gold);
+}
 
         /* 
          * 7. SECTION CONTACT
@@ -439,6 +456,15 @@
         .footer-socials a:hover {
             opacity: 1;
         }
+        footer p {
+    color: #e5e7eb;
+}
+
+footer p span {
+    color: var(--gold);
+    font-weight: 600;
+}
+
 
         /* Toast de notification (remplace l'alert) */
         #toast {
@@ -758,4 +784,5 @@
 
 
 </html>
+
 
